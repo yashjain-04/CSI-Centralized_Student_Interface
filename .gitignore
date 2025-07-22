@@ -1,0 +1,23 @@
+# NetBeans
+nbproject/private/
+build/
+dist/
+
+# IDE settings
+*.iml
+*.ipr
+*.iws
+
+# Compiled classes
+*.class
+
+# JARs and libraries
+*.jar
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# OS-generated files
+.DS_Store
+Thumbs.db
