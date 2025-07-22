@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+<!--        <h1>Login Page</h1>-->
+<!--        <form action="LoginCheckerServlet" method="post">
+            <table>
+                <tr>
+                    <td><strong>Enter Your ID : </strong></td>
+                    <td><strong><input type="text" name="userId" placeholder="Enter here..."></strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Enter Password : </strong></td>
+                    <td><strong><input type="text" name="password" placeholder="Enter here..."></strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Select Role : </strong></td>
+                    <td>
+                        <select name="role">
+                            <option>Student</option>
+                            <option>Faculty</option>
+                            <option>HOD</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><strong><input type="submit" Value="Login"></strong></td>
+                </tr>
+            </table>
+        </form>
+        <a href="registration.jsp">Register</a>-->
+        
+        <section class="wrapper">
+            <div class="form signup">
+                <header>Login</header>
+                <form action="LoginCheckerServlet" method="post">
+                  <input type="text" name="userId" placeholder="Enter ID..." required>
+                  <input type="text" name="password" placeholder="Enter Password..." required>
+                  <h3 id="select_role">Select Role : </h3>
+                  <select name="role">
+                        <option>Student</option>
+                        <option>Faculty</option>
+                        <option>HOD</option>
+                        <option>Admin</option>
+                  </select>
+                  <div class="checkbox">
+                    <input type="checkbox" id="signupCheck" />
+                    <label for="signupCheck">I accept all terms & conditions</label>
+                  </div>
+                  <input type="submit" value="Login" />
+                </form>
+                <br>
+                <a href="registration.jsp" id="register">Register?</a>
+          </div>
+
+          <script>
+            const wrapper = document.querySelector(".wrapper"),
+              signupHeader = document.querySelector(".signup header"),
+              loginHeader = document.querySelector(".login header");
+            loginHeader.addEventListener("click", () => {
+              wrapper.classList.add("active");
+            });
+            signupHeader.addEventListener("click", () => {
+              wrapper.classList.remove("active");
+            });
+          </script>
+        </section>
+
+    </body>
+</html>
